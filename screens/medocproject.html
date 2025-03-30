@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medoc HMS - Hospital Management System</title>
+    <link rel="stylesheet" href="../styles/medocproject.css">
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const screenshots = document.querySelectorAll(".screenshots img");
+    
+            screenshots.forEach((img, index) => {
+                setTimeout(() => {
+                    img.classList.add("show");
+                }, index * 300); 
+            });
+        });
+    </script>
+    <div class="header">
+        <div class="wave"></div>
+    </div>
+
+    <div class="main-content">
+        <div class="mockup"></div>
+        <h1 class="app_name">Medoc HMS</h1>
+        <h2 class="description">Hospital Management Application</h2>
+        <p class="content">
+            Medoc HMS provides operations management software to manage the day-to-day activities of your hospital, clinic, lab, or pharmacy. It is a future-ready system that makes things easier for healthcare businesses, as well as their patients. We have 300+ completely satisfied users in India & UAE.
+        </p>
+
+        <div class="screenshots">
+            <img src="../photos/medocscrnsht2.png" alt="Screen 1">
+            <img src="../photos/medocscrnsht3.png" alt="Screen 2">
+            <img src="../photos/medocscrnsht4.png" alt="Screen 3">
+            <img src="../photos/medocscrnsht5.png" alt="Screen 4">
+            <img src="../photos/medocscrnsht6.png" alt="Screen 5">
+            <img src="../photos/medocscrnsht7.png" alt="Screen 6">
+        </div>
+    </div>
+</body>
+</html>

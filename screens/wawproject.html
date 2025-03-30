@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAW - Advertisment App</title>
+    <link rel="stylesheet" href="../styles/wawproject.css">
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const screenshots = document.querySelectorAll(".screenshots img");
+    
+            screenshots.forEach((img, index) => {
+                setTimeout(() => {
+                    img.classList.add("show");
+                }, index * 300); 
+            });
+        });
+    </script>
+    <div class="header">
+        <div class="wave"></div>
+    </div>
+
+    <div class="main-content">
+        <div class="mockup"></div>
+        <h1 class="app_name">WAW</h1>
+        <h2 class="description">Advertisment App</h2>
+        <p class="content">
+            WAW is a revolutionary advertisement app that rewards users for watching ads. Simply watch engaging advertisements, earn coupons, and get a chance to win exciting prizes through our live lucky draw!
+        </p>
+
+        <div class="screenshots">
+            <img src="../photos/medocscrnsht2.png" alt="Screen 1">
+            <img src="../photos/medocscrnsht3.png" alt="Screen 2">
+            <img src="../photos/medocscrnsht4.png" alt="Screen 3">
+            <img src="../photos/medocscrnsht5.png" alt="Screen 4">
+            <img src="../photos/medocscrnsht6.png" alt="Screen 5">
+            <img src="../photos/medocscrnsht7.png" alt="Screen 6">
+        </div>
+    </div>
+</body>
+</html>

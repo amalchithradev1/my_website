@@ -1,0 +1,207 @@
+body {
+    background: white;
+    color: black;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Section */
+.header {
+    position: relative;
+    height: 55vh; /* Adjust height dynamically */
+    width: 100%;
+    background: url('https://cdn.prod.website-files.com/6768f29a6d5da42209173f20/6768f29b6d5da4220917745b_Rectangle%20(37).svg') no-repeat center;
+    background-size: cover;
+    color: white;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+/* Decorative Wave */
+.wave {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="white" fill-opacity="1" d="M0,192L80,186.7C160,181,320,171,480,192C640,213,800,267,960,256C1120,245,1280,171,1360,138.7L1440,107L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>') no-repeat bottom/cover;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+}
+
+/* Mockup Image */
+.mockup {
+    width: 150px;
+    height: 300px;
+    background: url('../photos/ekasysscrnsht1.png') no-repeat center/cover;
+    border-radius: 30px;
+    box-shadow: -10px 30px 30px rgba(0, 0, 0, 0.5);
+    border: 6px solid rgb(46, 44, 44);
+    position: absolute;
+    top: -50vh;
+    left: 10%;
+    transform: translateX(30%) rotate(-5deg);
+    z-index: 10;
+}
+
+/* App Name & Description */
+.app_name {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: white;
+    position: absolute;
+    top: -50vh;
+    left: 27%;
+    right: 20%;
+}
+
+.description,
+.content {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+    max-width: 70%;
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+    color: white;
+    position: absolute;
+    left: 27%;
+    right: 20%;
+    line-height: 1.6;
+}
+
+.description {
+    top: -45vh;
+}
+
+.content {
+    top: -42vh;
+}
+
+/* Screenshots Section */
+.screenshots {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    position: relative;
+}
+
+.screenshots img {
+    width: 240px;
+    height: 500px;
+    border-radius: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border: 6px solid rgb(46, 44, 44);
+    cursor: pointer;
+    position: relative;
+    top: -10vh;
+    opacity: 0;
+    transform: translateY(150px);
+    transition: opacity 1s ease-out, transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 1;
+}
+
+/* When the 'show' class is added */
+.screenshots img.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered Screenshot Position */
+.screenshots img:nth-child(2) { transform: translateY(50px); }
+.screenshots img:nth-child(3) { transform: translateY(-70px); }
+.screenshots img:nth-child(4) { transform: translateY(30px); }
+.screenshots img:nth-child(5) { transform: translateY(-100px); }
+.screenshots img:nth-child(6) { transform: translateY(70px); }
+
+/* Hover Effect */
+.screenshots img:hover {
+    transform: translateY(-50px) scale(1.2);
+    z-index: 10;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .mockup {
+        top: -40vh;
+        left: 50%;
+        transform: translateX(-50%) rotate(-5deg);
+    }
+
+    .app_name, .description, .content {
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .description { top: -40vh; }
+    .content { top: -38vh; }
+}
+
+@media screen and (max-width: 768px) {
+    .mockup {
+        width: 120px;
+        height: 250px;
+        top: -30vh;
+    }
+
+    .app_name {
+        font-size: 30px;
+        top: -30vh;
+    }
+
+    .description {
+        font-size: 18px;
+        top: -28vh;
+    }
+
+    .content {
+        font-size: 16px;
+        top: -26vh;
+    }
+
+    .screenshots img {
+        width: 180px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .mockup {
+        width: 100px;
+        height: 200px;
+        top: -25vh;
+    }
+
+    .app_name {
+        font-size: 24px;
+        top: -25vh;
+    }
+
+    .description {
+        font-size: 16px;
+        top: -23vh;
+    }
+
+    .content {
+        font-size: 14px;
+        top: -22vh;
+    }
+
+    .screenshots img {
+        width: 150px;
+        height: 350px;
+    }
+}
